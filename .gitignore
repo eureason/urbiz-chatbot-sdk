@@ -1,0 +1,45 @@
+node_modules/
+.next/
+*.log
+.DS_Store
+.env
+.env.local
+.env.*.local
+챗봇학습데이터/
+docs/
+
+# 대용량 데이터 전용 폴더 제외
+public/data/backup/
+
+# 특정 확장자 대용량 파일 제외
+*.gz
+*.bak
+*.bin
+*.txt
+*.json
+
+# [예외적으로 꼭 포함해야 하는 파일들]
+# 1. 100만개 만다라트 핵심 지식 (45MB + 15MB)
+!public/data/wiki_embeddings_1m_binary.bin
+!public/data/wiki_vocab_1m.txt
+
+# 2. 모든 소스 코드 (파이썬 스크립트 포함)
+!**/*.py
+!**/*.ts
+!**/*.tsx
+!**/*.js
+!**/*.mjs
+!**/*.prisma
+
+# 3. 필수 설정 파일
+!package.json
+!package-lock.json
+!tsconfig.json
+!.eslintrc.json
+!next.config.mjs
+!public/manifest.json
+!tailwind.config.ts
+!postcss.config.mjs
+!Dockerfile
+!docker-compose.yml
+!*.md
